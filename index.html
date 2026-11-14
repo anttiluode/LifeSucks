@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LifeSucks</title>
+<meta name="description" content="A life is a vine. Love is the flux. Whatever you stop feeding withers by itself.">
+<meta property="og:title" content="LifeSucks">
+<meta property="og:description" content="You get a few drops of attention a year. Money can't buy warmth. How many come to your funeral?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <main id="stage">
+    <canvas id="world" aria-label="Your life, drawn as a vine"></canvas>
+    <div id="yearflash" aria-hidden="true"></div>
+  </main>
+
+  <aside id="panel">
+    <header>
+      <div class="brand">LifeSucks</div>
+      <div class="age"><span id="age">18</span><small>years</small></div>
+    </header>
+
+    <section class="meters">
+      <div class="meter"><label>Health</label><div class="bar"><i id="hBar"></i></div><b id="hVal"></b></div>
+      <div class="meter"><label>Warmth</label><div class="bar warm"><i id="wBar"></i></div><b id="wVal"></b></div>
+      <div class="meter money"><label>Money</label><b id="mVal"></b></div>
+    </section>
+
+    <section class="alloc">
+      <div class="allocHead">
+        <span>This year your attention goes to</span>
+        <span id="left" class="left"></span>
+      </div>
+      <ul id="rows"></ul>
+    </section>
+
+    <div class="actions">
+      <button id="live" class="primary">Live this year</button>
+      <button id="live5">Live 5 years</button>
+    </div>
+
+    <section class="log"><ol id="log"></ol></section>
+  </aside>
+</div>
+
+<div id="event" class="overlay hidden" role="dialog" aria-modal="true">
+  <div class="card">
+    <div class="eAge" id="eAge"></div>
+    <h2 id="eTitle"></h2>
+    <p id="eText"></p>
+    <div id="eChoices" class="choices"></div>
+  </div>
+</div>
+
+<div id="start" class="overlay">
+  <div class="card intro">
+    <h1>LifeSucks</h1>
+    <p class="tag">Love is a flux. Stop feeding it and it stops.</p>
+    <p>Every year you get a few drops of attention. Pour them into the people in your life, into work, into yourself, into a dream.</p>
+    <p>Whatever you stop feeding withers by itself. Nobody decides it. There is no button for divorce or for your son no longer calling. The flow just stops.</p>
+    <p>Money comes from work. Warmth comes from people. Money cannot buy warmth.</p>
+    <button id="begin" class="primary">Begin at 18</button>
+    <div class="seed" id="seedLabel"></div>
+  </div>
+</div>
+
+<div id="end" class="overlay hidden">
+  <div class="card endcard">
+    <div class="endTop">
+      <canvas id="portrait" width="760" height="920"></canvas>
+      <div class="endText">
+        <div class="died" id="edAge"></div>
+        <p class="eline" id="edLine"></p>
+        <p class="estats" id="edStats"></p>
+        <div class="cols">
+          <div><h3>Who came</h3><p id="edCame"></p></div>
+          <div><h3>What withered</h3><ul id="edWither"></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="choices">
+      <button id="savePic" class="primary">Save picture</button>
+      <button id="copyText">Copy epitaph</button>
+      <button id="again">Live another life</button>
+      <button id="same">Live this life again</button>
+    </div>
+    <div class="seed" id="endSeed"></div>
+  </div>
+</div>
+
+<script src="life.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

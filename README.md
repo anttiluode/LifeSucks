@@ -1,5 +1,7 @@
 # LifeSucks
 
+![pic](pic.png)
+
 **Love is a flux. Stop feeding it and it stops.**
 
 **Play:** https://anttiluode.github.io/LifeSucks/
